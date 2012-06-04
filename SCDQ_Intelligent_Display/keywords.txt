@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map For SCDQ_Intelligent_Display
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SCDQ_Intelligent_Display    KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+clearMatrix        KEYWORD2
+setBrightness      KEYWORD2
+writeChar          KEYWORD2
+writeMatrixHexFive KEYWORD2
+selectMatrixDigit  KEYWORD2
+writeMatrixHex     KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
