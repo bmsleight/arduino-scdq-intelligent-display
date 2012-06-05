@@ -7,8 +7,12 @@
 #define MATRIX_TEXT 5 // MATRIX_DIGITS + 1
 #define MATRIX_TEXT_LENGTH 247 //(255-MATRIX_DIGITS-MATRIX_DIGITS) 
 
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
 
-#include <Arduino.h> 
 
 class SCDQ_Intelligent_Display {
   public:

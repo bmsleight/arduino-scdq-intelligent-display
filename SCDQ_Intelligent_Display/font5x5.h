@@ -11,20 +11,11 @@ High Efficiency Green SCDQ5544P/Q/R
 #ifndef FONT5X7_H
 #define FONT5X7_H 
 
-/*
-1
-14
-148
-27
-6
-
-
-*/
-
 
 // standard ascii 5x5 font
 // defines ascii characters 0x41-0x7a (32-127)
-static unsigned char Font5x5[] = {
+//static unsigned char Font5x5[] = {
+static unsigned char __attribute__ ((progmem)) Font5x7[] = {
 // ' ':
   0x00, 0x20, 0x40, 0x60, 0x80,
 // '!':
@@ -220,15 +211,5 @@ static unsigned char Font5x5[] = {
 
 #endif
 
-//*/
-/*
-// '1':
-  B00000001, B00100011, B01000111, B01101111, B10011111,
-// '2':
-  B00010000, B00101000, B01000100, B01100010, B10000001,
-// '3':
-  0x00, 0x20, 0x40, 0x60, 0x80,
-// '4':
-  0x00, 0x20, 0x40, 0x60, 0x80,
-*/
+
 

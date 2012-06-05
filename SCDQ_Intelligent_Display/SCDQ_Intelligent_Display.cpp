@@ -16,6 +16,8 @@ High Efficiency Green SCDQ5544P/Q/R
 #include "font5x5.h"
 // The font is stored in program memory:
 #include <avr/pgmspace.h>
+#include <string.h> 
+
 
 SCDQ_Intelligent_Display::SCDQ_Intelligent_Display(byte pin_matrix_load, byte pin_matrix_sdata, byte pin_matrix_sdclk) {
 
@@ -162,7 +164,9 @@ void SCDQ_Intelligent_Display::_getRowsForChar(byte rows[MATRIX_ROWS], char c, b
     bit_mask = B00011111;
   }
   for (int i = 0; i < MATRIX_ROWS; i++) {
-    rows[i] = Font5x5[((c- 0x20) * MATRIX_ROWS) + i] & bit_mask;
+//    rows[i] =                 Font5x5[((c- 0x20) * MATRIX_ROWS) + i] & bit_mask;
+      rows[i] = (pgm_read_byte(&Font5x7[((c- 0x20) * MATRIX_ROWS) + i]))  & bit_mask;
+
   }
 }
 
